@@ -9,7 +9,6 @@ Feel free to grab everything you may need from this code and have a wonderful da
   - React
   - React Dom
   - React router dom
-  - chakra-ui
   - prettier
   - ESLint
   - Typescript

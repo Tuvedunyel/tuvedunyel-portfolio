@@ -1,0 +1,12 @@
+{
+  "projets": {
+    "nom": "DB conseils",
+    "url": "https://www.db-conseils.com",
+    "logo": "https://www.db-conseils.com/wp-content/themes/db-conseil/img/top-logo.svg",
+    "primaryColor": "#2a5393",
+    "secondaryColor": "#fdc42d",
+    "descriptif": "Cabinet de recrutement sur mesure. Que vous soyez une entreprise à la recherche du salarié idéal ou un candidat en quête d’un poste sur-mesure, DB Conseils vous accompagne dans la réussite de votre projet professionnel.",
+    "technologies": ["WordPress", "PHP", "SASS", "Javascript", "VueJs"],
+    "externalDependencies": ["Api de Nicoka"]
+  }
+}
