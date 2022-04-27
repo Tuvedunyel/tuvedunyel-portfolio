@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "json-server db.json -p 5000 -w -d 0"
   },
   "keywords": [],
   "author": "Montoya Grégoire",
@@ -14,10 +15,16 @@
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@reduxjs/toolkit": "^1.8.1",
+    "axios": "^0.27.2",
     "framer-motion": "^6.3.2",
+    "json-server": "^0.17.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0"
+    "react-icons": "^4.3.1",
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

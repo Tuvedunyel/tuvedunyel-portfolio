@@ -14,6 +14,9 @@ Feel free to grab everything you may need from this code and have a wonderful da
   - ESLint
   - Typescript
   - Vite
+  - Json server
+  - Redux
+  - Redux toolkit
 
 ## Npm script
 
@@ -30,6 +33,11 @@ Feel free to grab everything you may need from this code and have a wonderful da
   Compile for production
   ```bash
   npm run build
+  ```
+
+  Run internal server
+  ```bash
+  npm run server
   ```
 
 [BTG Communication]: https://www.btg-communication.fr
