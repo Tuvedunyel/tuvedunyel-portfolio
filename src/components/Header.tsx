@@ -5,12 +5,14 @@ import {
   Spacer,
   Center,
   Avatar,
-  Heading,
   useColorMode,
-  useColorModeValue
+  useColorModeValue,
+  Heading,
+  Link
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Link as ReachLink } from 'react-router-dom'
 
 const Header = () => {
   const { toggleColorMode } = useColorMode()
@@ -19,15 +21,24 @@ const Header = () => {
     <header>
       <Flex>
         <Center>
-          <Avatar
-            name="Montoya Grégoire"
-            src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://btg-communication.fr/wp-content/uploads/2022/02/portrait_gregoire.jpg"
-          />
+          <ReachLink to="/">
+            <Avatar
+              name="Montoya Grégoire"
+              src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img/https://btg-communication.fr/wp-content/uploads/2022/02/portrait_gregoire.jpg"
+            />
+          </ReachLink>
         </Center>
         <Spacer />
         <Center>
-          <Heading as="h5" size="xl" color={ useColorModeValue('teal.600', 'teal.300') }>
-            Bienvenue
+          <Heading as='h5' fontSize='25px'>
+            <Link
+              as={ReachLink}
+              to="/mes-projets"
+              color={useColorModeValue('#322659', '#FAF5FF')}
+            >
+              Projets
+            </Link>
+
           </Heading>
         </Center>
         <Spacer />
@@ -44,7 +55,10 @@ const Header = () => {
               colorScheme={useColorModeValue('purple', 'teal')}
               variant="outline"
               icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
-              aria-label={useColorModeValue('Passer en monde clair', 'Passer en monde sombre')}
+              aria-label={useColorModeValue(
+                'Passer en monde clair',
+                'Passer en monde sombre'
+              )}
               onClick={toggleColorMode}
             />
           </motion.div>
