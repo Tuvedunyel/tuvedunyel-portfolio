@@ -7,6 +7,9 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Home from './components/layouts/Home'
 import Projects from './components/layouts/Projects'
 import { AnimatePresence } from 'framer-motion'
+import Contact from './components/layouts/Contact'
+import Politiques from './components/layouts/Politiques'
+import Mentions from './components/layouts/Mentions'
 
 const App: FC<{ pageProps: string }> = ({ pageProps }: { pageProps: string }) => {
   const location = useLocation();
@@ -28,6 +31,9 @@ const App: FC<{ pageProps: string }> = ({ pageProps }: { pageProps: string }) =>
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />
               <Route path="/mes-projets" element={<Projects />} />
+              <Route path="/contactez-moi" element={<Contact />} />
+              <Route path="/politique" element={<Politiques />} />
+              <Route path="/mentions" element={<Mentions />} />
             </Routes>
           </AnimatePresence>
         </Container>

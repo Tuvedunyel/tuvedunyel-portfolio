@@ -32,6 +32,12 @@ a {
   text-decoration: none;
 }
 
+a.active {
+  border: none;
+  background: #6B46C1;
+  border-radius: 10px;
+}
+
 a:hover {
   text-decoration: none !important;
 }
