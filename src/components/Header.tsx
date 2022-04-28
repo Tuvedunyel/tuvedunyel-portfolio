@@ -5,17 +5,15 @@ import {
   Spacer,
   Center,
   Avatar,
-  Heading
+  Heading,
+  useColorMode,
+  useColorModeValue
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import { useDispatch, useSelector } from 'react-redux'
-import { setDarkMode } from '../features/darkMode.slice'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const Header = () => {
-  const dispatch = useDispatch()
-  const darkMode: boolean = useSelector(
-    (state: { darkMode: boolean }) => state.darkMode
-  )
+  const { toggleColorMode } = useColorMode()
 
   return (
     <header>
@@ -28,32 +26,29 @@ const Header = () => {
         </Center>
         <Spacer />
         <Center>
-          <Heading as="h5" size="xl" color={darkMode ? 'teal.300' : 'teal.600'}>
+          <Heading as="h5" size="xl" color={ useColorModeValue('teal.600', 'teal.300') }>
             Bienvenue
           </Heading>
         </Center>
         <Spacer />
-        <div className="Darkmode">
-          {darkMode ? (
+        <AnimatePresence exitBeforeEnter>
+          <motion.div
+            style={{ display: 'inline-block' }}
+            initial={{ y: -20, opacity: 0 }}
+            key={useColorModeValue('light', 'dark')}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 20, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <IconButton
-              colorScheme="teal"
+              colorScheme={useColorModeValue('purple', 'teal')}
               variant="outline"
-              fontSize="35px"
-              icon={<SunIcon />}
-              aria-label="Toggle Light mode"
-              onClick={() => dispatch(setDarkMode(false))}
+              icon={useColorModeValue(<MoonIcon />, <SunIcon />)}
+              aria-label={useColorModeValue('Passer en monde clair', 'Passer en monde sombre')}
+              onClick={toggleColorMode}
             />
-          ) : (
-            <IconButton
-              colorScheme="purple"
-              variant="outline"
-              fontSize="30px"
-              icon={<MoonIcon />}
-              aria-label="Toggle dark mode"
-              onClick={() => dispatch(setDarkMode(true))}
-            />
-          )}
-        </div>
+          </motion.div>
+        </AnimatePresence>
       </Flex>
     </header>
   )
