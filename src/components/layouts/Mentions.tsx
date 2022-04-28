@@ -1,9 +1,12 @@
-import { Heading } from '@chakra-ui/react';
+import { Heading, useColorModeValue } from '@chakra-ui/react';
 import React, { FC } from 'react';
+import Transition from '../Transition';
 
 const Mentions: FC = () => {
     return (
-        <Heading as='h1'>Mentions légales</Heading>
+        <Transition>
+            <Heading as='h1' color={useColorModeValue('purple.900', 'teal.300')}>Mentions légales</Heading>
+        </Transition>
     );
 };
 

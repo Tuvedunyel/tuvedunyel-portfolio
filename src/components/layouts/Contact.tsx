@@ -10,7 +10,9 @@ import {
   Input,
   GridItem,
   Textarea,
-  Button
+  Button,
+  Flex,
+  Checkbox
 } from '@chakra-ui/react'
 import { ChangeEvent, useRef, useState } from 'react'
 import Transition from '../Transition'
@@ -22,6 +24,7 @@ const Contact = () => {
   const [phoneNumber, setPhoneNumber] = useState('')
   const [message, setMessage] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isConsent, setIsConsent] = useState(false)
   const form = useRef({
     lastName: '',
     firstName: '',
@@ -32,9 +35,9 @@ const Contact = () => {
 
   return (
     <Transition>
-      <Container maxW="6xl" mt={10}>
+      <Container maxW="6xl" mt={25}>
         <Center>
-          <Heading as="h1" color={useColorModeValue('teal.600', 'teal.300')}>
+          <Heading as="h1" color={useColorModeValue('purple.900', 'teal.300')}>
             Contactez moi
           </Heading>
         </Center>
@@ -101,6 +104,7 @@ const Contact = () => {
                   <Textarea
                     id="message"
                     size="md"
+                    rows={10}
                     value={message}
                     onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
                       setMessage(e.target.value)
@@ -110,18 +114,39 @@ const Contact = () => {
               </GridItem>
               <GridItem colSpan={2}>
                 <Center>
+                  <FormControl isRequired>
+                    <Checkbox
+                      id="consent"
+                      colorScheme={useColorModeValue('purle', 'teal')}
+                      isChecked={isConsent}
+                      onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                        setIsConsent(e.target.checked)
+                      }
+                    >
+                      J'accepte que mes données soient utilisées et conservées le temps de me contacter ou sous une durée de 1 an maximum.
+                    </Checkbox>
+                  </FormControl>
+                </Center>
+              </GridItem>
+              <GridItem colSpan={2}>
+                <Center>
                   {isSubmitting ? (
                     <Button
                       isLoading
                       loadingText="Envoie..."
-                      colorScheme="teal"
+                      colorScheme={useColorModeValue('purple', 'teal')}
                       variant="solid"
                       size="lg"
                     >
                       Envoyer
                     </Button>
                   ) : (
-                    <Button colorScheme="teal" variant="solid" size="lg" type='submit'>
+                    <Button
+                      colorScheme={useColorModeValue('purple', 'teal')}
+                      variant="solid"
+                      size="lg"
+                      type="submit"
+                    >
                       Envoyer
                     </Button>
                   )}

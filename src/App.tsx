@@ -10,12 +10,13 @@ import { AnimatePresence } from 'framer-motion'
 import Contact from './components/layouts/Contact'
 import Politiques from './components/layouts/Politiques'
 import Mentions from './components/layouts/Mentions'
+import Footer from './components/Footer'
 
 const App: FC<{ pageProps: string }> = ({ pageProps }: { pageProps: string }) => {
   const location = useLocation();
 
   return (
-    <Chakra cookies={pageProps}>
+    <Chakra cookies={pageProps}> 
       <Container maxW="100%" p={0}>
         <Container maxW="96%" pt={5} pb={5}>
           <Header />
@@ -37,6 +38,7 @@ const App: FC<{ pageProps: string }> = ({ pageProps }: { pageProps: string }) =>
             </Routes>
           </AnimatePresence>
         </Container>
+        <Footer />
       </Container>
     </Chakra>
   )

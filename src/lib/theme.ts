@@ -5,6 +5,10 @@ const styles = {
   global: (props: any) => ({
     body: {
       bg: mode('#EDF2F7', '#1A202C')(props)
+    },
+    fonts: {
+      heading: 'Inter, sans-serif',
+      body: 'Inter, sans-serif'
     }
   })
 }
