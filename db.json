@@ -1,12 +1,27 @@
 {
-  "projets": {
-    "nom": "DB conseils",
-    "url": "https://www.db-conseils.com",
-    "logo": "https://www.db-conseils.com/wp-content/themes/db-conseil/img/top-logo.svg",
-    "primaryColor": "#2a5393",
-    "secondaryColor": "#fdc42d",
-    "descriptif": "Cabinet de recrutement sur mesure. Que vous soyez une entreprise à la recherche du salarié idéal ou un candidat en quête d’un poste sur-mesure, DB Conseils vous accompagne dans la réussite de votre projet professionnel.",
-    "technologies": ["WordPress", "PHP", "SASS", "Javascript", "VueJs"],
-    "externalDependencies": ["Api de Nicoka"]
-  }
+  "projets": [
+    {
+      "nom": "DB conseils",
+      "url": "https://www.db-conseils.com",
+      "logo": "https://www.db-conseils.com/wp-content/themes/db-conseil/img/top-logo.svg",
+      "primaryColor": "#2a5393",
+      "secondaryColor": "#fdc42d",
+      "descriptif": "Cabinet de recrutement sur mesure. Que vous soyez une entreprise à la recherche du salarié idéal ou un candidat en quête d’un poste sur-mesure, DB Conseils vous accompagne dans la réussite de votre projet professionnel.",
+      "technologies": ["WordPress", "PHP", "SASS", "Javascript", "VueJs"],
+      "externalDependencies": ["Api de Nicoka"],
+      "id": 1
+    },
+    {
+      "nom": "Tours en commun",
+      "url": "https://www.btg-dev.com/toursencommun",
+      "logo": "https://btg-dev.com/toursencommun/wp-content/uploads/2021/08/favicon.svg",
+      "primaryColor": "#92b508",
+      "secondaryColor": "#df3465",
+      "descriptif": "Site de Tours en commun. Tours en Commun, c’est 42 élus et élues de la majorité municipale, une majorité plurielle composée d’écologistes, de socialistes et de citoyen.ne.s engagé.e.s autour de valeurs communes. Depuis juillet 2020, nous travaillons pour faire de Tours une ville écologique, solidaire et de la démocratie permanente. Avec patience et détermination, nous œuvrons à donner un nouvel élan à notre ville, en phase avec notre époque, déterminés à réussir les transitions écologique et sociale en ne laissant personne sur le bord du chemin.",
+      "technologies": ["WordPress", "PHP", "SASS", "Javascript", "VueJs"],
+      "externalDependencies": [""],
+      "id": 2
+
+    } 
+  ]
 }
