@@ -17,26 +17,26 @@ Feel free to grab everything you may need from this code and have a wonderful da
   - Redux
   - Redux toolkit
 
-## Npm script
+## Pnpm script
 
   Install dependencies
   ```bash
-  npm install
+  pnpm install
   ```
 
   Start dev server
   ```bash
-  npm run dev
+  pnpm run dev
   ```
 
   Compile for production
   ```bash
-  npm run build
+  pnpm run build
   ```
 
   Run internal server
   ```bash
-  npm run server
+  pnpm run server
   ```
 
 [BTG Communication]: https://www.btg-communication.fr
