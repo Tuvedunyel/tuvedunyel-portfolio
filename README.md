@@ -26,17 +26,17 @@ Feel free to grab everything you may need from this code and have a wonderful da
 
   Start dev server
   ```bash
-  pnpm run dev
+  pnpm dev
   ```
 
   Compile for production
   ```bash
-  pnpm run build
+  pnpm build
   ```
 
   Run internal server
   ```bash
-  pnpm run server
+  pnpm server
   ```
 
 [BTG Communication]: https://www.btg-communication.fr
